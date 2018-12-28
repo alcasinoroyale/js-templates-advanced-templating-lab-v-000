@@ -36,6 +36,14 @@
       {{> recipeDetailsPartial }}
     </script>
 
+    <script id="recipe-details-partial" type="text/x-handlebars-template">
+      <p id="recipeDescription">{{ description }}</p>
+      {{#each ingredients}}
+        {{ displayIngredient this }}
+      {{/each}}
+    </script>
+
+
     <div id="mocha"></div>
     <script src="node_modules/mocha/mocha.js"></script>
     <script src="node_modules/expect/umd/expect.min.js"></script>
