@@ -12,7 +12,7 @@
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
     <script src="index.js"></script>
     <!-- Open this file and call `mocha.run()` in console to run tests -->
-    
+
     <script id="recipe-form-template" type="text/x-handlebars-template">
       <form id="recipe=form" onsubmit="handleSubmit();return false;">
       <label for="name">Name: </label>
@@ -28,6 +28,12 @@
         {{/each}}
       <input type="submit">
       </form>
+    </script>
+
+    <script id="recipe-template" type="text/x-handlebars-template">
+      <header id="recipeName">{{ name }}</header>
+      <a href="#" onclick="displayEditForm()">Edit Recipe</a>
+      {{> recipeDetailsPartial }}
     </script>
 
     <div id="mocha"></div>
