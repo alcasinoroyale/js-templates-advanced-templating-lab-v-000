@@ -16,7 +16,7 @@ function handleSubmit() {
   let recipe = {}
   let rName = document.getElementById('name');
   let rDesc = document.getElementById('description');
-  let rIngr = document.getElementById('ingredients');
+  let ingredientList = document.getElementById('ingredients');
 
   recipe.name = rName.value;
   recipe.description = rDesc.value;
