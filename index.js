@@ -19,9 +19,12 @@ function handleSubmit() {
   recipe.name = rName.value;
   recipe.description = rDesc.value;
   recipe.ingredients = [];
-  for(let i=0; i< rIngr.length; i++) {
+  for(let i=0; i < rIngr.length; i++) {
     recipe.ingredients.push(rIngr[i].value);
   }
+  let recipeTemplate = document.getElementById('recipe-template').innerHTML;
+  let recipeFunction = Handlebars.compile(recipeTemplate);
+  document.getElementById('main').innerHTML = recipeFunction(recipe);
 }
 
 
