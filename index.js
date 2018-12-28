@@ -33,7 +33,7 @@ function displayEditForm() {
   let recipe = {}
   let rName = document.getElementById('name');
   let rDesc = document.getElementById('description');
-  let rIngr = document.getElementById('ingredients');
+  let rIngr = document.getElementByName('ingredients');
 
   recipe.name = rName.value;
   recipe.description = rDesc.value;
