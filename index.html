@@ -16,7 +16,17 @@
       <form id="recipe=form" onsubmit="handleSubmit();return false;">
       <label for="name">Name: </label>
       <input type="text" id="name" name="name" value="{{name}}"><br>
+
       <label for="description">Description: </label>
+      <input type="text" id="description" name="description"
+      value="{{description}}"><br>
+      {{#each ingredients}}
+
+      <label for="ingredients">Ingredient: </label>
+      <input type="text" name="ingredients" value="{{this}}">
+        {{/each}}
+      <input type="submit">
+      </form>
     </script>
 
 
