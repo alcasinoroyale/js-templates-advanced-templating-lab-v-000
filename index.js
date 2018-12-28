@@ -31,8 +31,8 @@ function handleSubmit() {
 
 function displayEditForm() {
   let recipe = {}
-  let rName = document.getElementById('name');
-  let rDesc = document.getElementById('description');
+  let rName = document.getElementById('recipeName');
+  let rDesc = document.getElementById('recipeDescription');
   let rIngr = document.getElementsByName('ingredients');
 
   recipe.name = rName.innerHTML;
