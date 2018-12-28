@@ -10,6 +10,20 @@ function init() {
   })
 }
 
+function handleSubmit() {
+  let recipe = {}
+  let rName = document.getElementById('name');
+  let rDesc = document.getElementById('description');
+  let rIngr = document.getElementById('ingredients');
+
+  recipe.name = rName.value;
+  recipe.description = rDesc.value;
+  recipe.ingredients = [];
+  for(let i=0; i< rIngr.length; i++) {
+    recipe.ingredients.push(rIngr[i].value);
+  }
+}
+
 
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
