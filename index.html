@@ -14,6 +14,9 @@
     <!-- Open this file and call `mocha.run()` in console to run tests -->
     <script id="recipe-form-template" type = "text/x-handlebars-template">
       <form id="recipe=form" onsubmit="handleSubmit();return false;">
+      <label for="name">Name: </label>
+      <input type="text" id="name" name="name" value="{{name}}"><br>
+      <label for="description">Description: </label>
     </script>
 
 
