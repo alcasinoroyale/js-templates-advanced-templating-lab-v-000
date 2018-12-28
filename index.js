@@ -35,8 +35,8 @@ function displayEditForm() {
   let rDesc = document.getElementById('description');
   let rIngr = document.getElementsByName('ingredients');
 
-  recipe.name = rName.value;
-  recipe.description = rDesc.value;
+  recipe.name = rName.innerHTML;
+  recipe.description = rDesc.innerHTML;
   recipe.ingredients = [];
   for(let i = 0; i < rIngr.length; i++) {
     recipe.ingredients.push(rIngr[i].innerHTML);
