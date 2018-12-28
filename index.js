@@ -27,6 +27,22 @@ function handleSubmit() {
   document.getElementById('main').innerHTML = recipeFunction(recipe);
 }
 
+function displayEditForm() {
+  let recipe = {}
+  let rName = document.getElementById('name');
+  let rDesc = document.getElementById('description');
+  let rIngr = document.getElementById('ingredients');
+
+  recipe.name = rName.value;
+  recipe.description = rDesc.value;
+  recipe.ingredients = [];
+  for(let i = 0; i < rIngr.length; i++) {
+    recipe.ingredients.push(rIngr[i].innerHTML);
+}
+  let recipeTemplate = document.getElementById('recipe-form-template').innerHTML;
+  let recipeFunction = Handlebars.compile(recipeTemplate);
+  document.getElementById('main').innerHTML = recipeFunction(recipe);
+}
 
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
